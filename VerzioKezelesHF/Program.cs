@@ -24,7 +24,15 @@ namespace VerzioKezelesHF
         }
         static void Main(string[] args)
         {
-            beolvas(10);
+            beolvas(1);
+            bool exit = false;
+            int szam;
+            do
+            {
+                Console.Write("\n\nAdjon meg hany szam atlagat akarja: ");
+                exit = Int32.TryParse(Console.ReadLine(), out szam);
+            } while (!exit);
+            beolvas(szam);
         }
     }
 }
